@@ -14,7 +14,7 @@
             padding: 20px 40px;
             font-size: 24px;
             cursor: pointer;
-            background-color: #4CAF50;
+            background-color: #ff0000;
             color: white;
             border: none;
             border-radius: 5px;
@@ -47,11 +47,11 @@
 
         function countClick() {
             clicks++;
-            document.getElementById('counter').innerText = `クリック数: ${clicks} / ${goal}`;
+            document.getElementById('counter').innerText = `押した数: ${clicks} / ${goal}`;
             if (clicks >= goal) {
                 document.getElementById('message').style.display = 'block';
                 document.getElementById('clickButton').disabled = true;
-                document.getElementById('clickButton').innerText = 'クリア済み！';
+                document.getElementById('clickButton').innerText = '930回も押したよ';
             }
         }
     </script>
