@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>930クリックチャレンジ</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin-top: 50px;
+        }
+        #clickButton {
+            padding: 20px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #clickButton:hover {
+            background-color: #45a049;
+        }
+        #counter {
+            font-size: 28px;
+            margin: 20px;
+        }
+        #message {
+            font-size: 32px;
+            color: #ff4444;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>930クリックチャレンジ</h1>
+    <p>ボタンを930回クリックしてクリアを目指そう！</p>
+    <button id="clickButton" onclick="countClick()">クリック！</button>
+    <p id="counter">クリック数: 0 / 930</p>
+    <p id="message">クリア！お誕生日おめでとう！🎉</p>
+
+    <script>
+        let clicks = 0;
+        const goal = 930;
+
+        function countClick() {
+            clicks++;
+            document.getElementById('counter').innerText = `クリック数: ${clicks} / ${goal}`;
+            if (clicks >= goal) {
+                document.getElementById('message').style.display = 'block';
+                document.getElementById('clickButton').disabled = true;
+                document.getElementById('clickButton').innerText = 'クリア済み！';
+            }
+        }
+    </script>
+</body>
+</html>
